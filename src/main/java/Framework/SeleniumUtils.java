@@ -1,5 +1,6 @@
 package Framework;
 
+import lombok.AllArgsConstructor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.WindowType;
@@ -7,14 +8,15 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.util.Set;
 
+@AllArgsConstructor
 public class SeleniumUtils {
 
 WebDriver driver;
 
-public SeleniumUtils(WebDriver driver)
-{
-    this.driver=driver;
-}
+//public SeleniumUtils(WebDriver driver)
+//{
+//    this.driver=driver;
+//}
 
 public void clickOnElement(WebElement element, String labelname)
 {
