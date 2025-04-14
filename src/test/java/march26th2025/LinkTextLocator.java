@@ -1,9 +1,6 @@
 package march26th2025;
 
-import Framework.BrowserUtils;
-import Framework.PathUtils;
-import Framework.Reports;
-import Framework.SeleniumUtils;
+import Framework.*;
 import Framework.constants.BrowserTypes;
 import lombok.SneakyThrows;
 import org.openqa.selenium.*;
@@ -19,7 +16,8 @@ public class LinkTextLocator {
 
         driver = BrowserUtils.GetDriver(BrowserTypes.CHROME.getBrowser());
 
-        SeleniumUtils seleniumUtils=new SeleniumUtils(driver);
+        ElementUtils elementUtils=new ElementUtils(driver);
+        SeleniumUtils seleniumUtils=new SeleniumUtils(driver,elementUtils);
 
         seleniumUtils.launchApplication("https://www.cricbuzz.com");
 

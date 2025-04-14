@@ -1,6 +1,7 @@
 package Framework;
 
 import lombok.AllArgsConstructor;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.WindowType;
@@ -12,6 +13,7 @@ import java.util.Set;
 public class SeleniumUtils {
 
 WebDriver driver;
+ElementUtils elementUtils;
 
 //public SeleniumUtils(WebDriver driver)
 //{
@@ -25,6 +27,15 @@ public void clickOnElement(WebElement element, String labelname)
 
     element.click();
 }
+    public void clickOnElement(By by, String labelname)
+    {
+        WebElement element=elementUtils.findElement(by);
+
+        if (element == null)
+            throw new GenericExceptions("Unable to find the element for");
+
+        element.click();
+    }
 
 public void enterData(WebElement element,String data,String labelName)
 {
