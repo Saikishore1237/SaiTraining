@@ -1,6 +1,7 @@
+package april1st2025;
+
 import Framework.BrowserUtils;
 import Framework.ElementUtils;
-import Framework.PathUtils;
 import Framework.SeleniumUtils;
 import Framework.constants.BrowserTypes;
 import lombok.SneakyThrows;
@@ -8,7 +9,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-public class april1st2025 {
+public class HandlingBrowserAlerts {
     @SneakyThrows
     public static void main(String[] args) {
 
